@@ -5,4 +5,4 @@ export const initializeParseClient = (appId,  masterKey, serverURL) => {
   Parse.serverURL = serverURL;
 
   return {Parse};
-}
+};

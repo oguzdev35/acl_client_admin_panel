@@ -35,8 +35,13 @@ app.use(helmet.noSniff());
 app.use(helmet.permittedCrossDomainPolicies());
 app.use(helmet.referrerPolicy());
 app.use(helmet.xssFilter());
-
 app.use(cors()); // we permit cross-origin requests, according to our decision this can be disabled.
+
+// Routes for client administration dashboard
+import userRoutes from './routes/user.route';
+import authRoutes from './routes/auth.route';
+app.use('/', userRoutes);
+app.use('/', authRoutes);
 
 // Serve the Parse-Server instances on the /p URL prefix
 serverInstances.forEach( ({mountPath, api}) => {

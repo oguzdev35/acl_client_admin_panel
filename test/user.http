@@ -1,0 +1,43 @@
+GET http://localhost:2000/api/users HTTP/1.1
+Accept: application/json
+
+###
+POST http://localhost:2000/api/users HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "username": "oguz01",
+    "password": "1234",
+    "email": "oguz@mail.com",
+    "phone": "666-123-33-11"
+}
+
+###
+GET http://localhost:2000/api/users/FM70xibj4M HTTP/1.1
+Accept: application/json
+
+###
+PUT http://localhost:2000/api/users/FM70xibj4M HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "phone": "222-666-11-56",
+    "email": "oguz123@gmail.com"
+}
+
+###
+POST http://localhost:2000/auth/signin HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "username": "oguz01",
+    "password": "1234"
+}
+
+###
+
+GET  http://localhost:2000/auth/signout HTTP/1.1
+Accept: application/json
